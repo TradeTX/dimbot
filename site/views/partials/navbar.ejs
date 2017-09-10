@@ -1,0 +1,34 @@
+<nav>
+  <header class="nav animated fadeInDown">
+    <div class="container">
+      <div class="nav-left">
+        <a class="nav-item logo" href="/">DimBot</a>
+        <a class="nav-item" href="/commands">Commands</a>
+      </div>
+      <div class="nav-right nav-menu">
+        <a class="nav-item socicon-discord" href="/discord" target="_blank"></a>
+        <a class="nav-item socicon-github" href="https://github.com/lloti/dimbot.xyz" target="_blank"></a>
+        <a class="nav-item socicon-paypal" href="/donate"></a>
+        <a class="nav-item socicon-twitter" href="https://twitter.com/xDimGG" target="_blank"></a>
+      <% if (loggedIn) { %>
+        <div class="user">
+          <span><%= user.username %></span>
+          <% if (user.avatar) { %>
+          <img src="<%= `//cdn.discordapp.com/avatars/${user.id}/${user.avatar}?size=32` %>" alt="<%= user.username %>">
+          <% } %>
+        </div>
+      <% } else { %>
+        <a class="nav-item" href="/login">Login</a>
+      <% } %>
+      </div>
+    </div>
+  </header>
+  <% if (loggedIn) { %>
+  <div class="container">
+    <div class="dropdown">
+      <a href="/servers">Servers</a>
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+  <% } %>
+</nav>

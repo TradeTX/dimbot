@@ -1,0 +1,38 @@
+{
+  "author": "Dim",
+  "bugs": {
+    "url": "https://github.com/lloti/dimsite/issues"
+  },
+  "dependencies": {
+    "bluebird": "*",
+    "btoa": "*",
+    "canvas": "*",
+    "cheerio": "*",
+    "client-sessions": "*",
+    "discord.js": "*",
+    "ejs": "*",
+    "express": "*",
+    "glob": "*",
+    "hastebin-generator": "*",
+    "hex-rgb": "*",
+    "moment": "*",
+    "morgan": "*",
+    "node-fetch": "*",
+    "redis": "*",
+    "rgb-hex": "*",
+    "uws": "*",
+    "whois": "*",
+    "xml2js": "*",
+    "ytdl-core": "*"
+  },
+  "description": "The only Discord bot you'll ever need",
+  "homepage": "https://github.com/lloti/dimsite",
+  "license": "MIT",
+  "main": "bot/app.js",
+  "name": "dim",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lloti/dimsite.git"
+  },
+  "version": "1.0.0"
+}

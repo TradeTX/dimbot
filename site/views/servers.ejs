@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include partials/head %>
+<body>
+  <% include partials/navbar %>
+  <main>
+    <section class="servers-container">
+      <div class="container">
+      <% if (servers.length) { %>
+        <h1 class="server-selector animated fadeInDownBig">Select a server</h1>
+        <div id="servers" class="animated fadeInUpBig">
+        <% for (server of servers) { %>
+          <a href="/add?guild=<%= server.id %>" target="_blank" title="<%= server.name %>">
+          <% if (server.icon) { %>
+            <img src="<%= server.icon ? `//cdn.discordapp.com/icons/${server.id}/${server.icon}` : '' %>" alt="<%= server.name %>">
+          <% } else { %>
+            <% const i = server.name.toUpperCase().split(' '); %>
+            <span id="server-text"><%= i.length === 1 ? i[0].charAt(0) : i[0].charAt(0) + i[1].charAt(0) %></span>
+          <% } %>
+          </a>
+        <% } %>
+        </div>
+      <% } else { %>
+        <h1>You aren't the admin of any servers you're in.</h1>
+      <% } %>
+      </div>
+    </section>
+  </main>
+  <% include partials/footer %>
+</body>
+</html>

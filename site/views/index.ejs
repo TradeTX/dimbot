@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include partials/head %>
+<body>
+  <% include partials/navbar %>
+  <main class="container">
+    <span class="home-header">DimBot is currently on <strong><%= (parseInt(guildCount)).toLocaleString() %></strong> servers</span>
+    <% if (loggedIn) { %>
+      
+    <% } else { %>
+      
+    <% } %>
+  </main>
+  <% include partials/footer %>
+</body>
+</html>
